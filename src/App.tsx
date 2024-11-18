@@ -1,35 +1,30 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { MdMarkEmailUnread } from "react-icons/md";
+import { FaInstagram } from "react-icons/fa6";
+import { AiFillGithub } from "react-icons/ai";
+import { Helmet } from "react-helmet-async";
+import "./font.css";
+import "./App.css";
 
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+const App = () => {
+  return <>
+    <Helmet>
+      <title>YUNJISANG</title>
+    </Helmet>
+    <div className="container">
+      <div className="title">
+        <h1>YUN JISANG</h1>
+        <h2>Developer</h2>
+        <h3>Developer</h3>
+        <h4>Developer</h4>
+        <h5>Developer</h5>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
+      <div className="contact">
+        <span><MdMarkEmailUnread color="white" /> yjs12180825@gmail.com</span>
+        <span><FaInstagram color="white" /> @yunjisang_</span>
+        <span><AiFillGithub color="white" /> @balhyo_younjisang</span>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </div>
+  </>
 }
 
-export default App
+export default App;
